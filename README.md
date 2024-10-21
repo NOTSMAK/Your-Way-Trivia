@@ -19,8 +19,16 @@
 > * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group. You will need to hold two to three scrum/check-in meetings with your lab TA/reader at different times in addition to the final demo.
 
 ## Project Description
- > Your project description should summarize the project you are proposing. Be sure to include:
- > * Why is it important or interesting to you?
+> Trivia is one of the world's most well-known and loved games. It can be an intense party game that combines logic, user interaction,  and fun visual elements. To apply and develop our programming skills, we wanted to recreate this famous game. 
+
+> For the game logic and core mechanics, such as question generation, answer validation, and score calculation, we will be using C++. To structure and style the project, we will use HTML and CSS for our website format. JavaScript will also be used to enhance the game with visual effects. 
+
+> Players input answers via keyboard and mouse input. They may also interact with various UI elements such as buttons to,  for example, start the game, submit answers, or navigate menus. The output will display said questions, feedback on correctness of answers, player scores, and interactive animations. It will also show a leaderboard.
+
+> There are three main features of this project. The first is the question and answer mechanism. This may take the form of multiple-choice or true/false and will be in differing subject categories. The second is the score tracking, which automatically keeps track of correctness and updates each player's score for the leaderboard. The third feature will be animations and visual feedback, which we hope to make the project appear more seamless and high quality. 
+
+ > Your project description should summarize the project you are proposing. Be sure to include: 
+ > * Why is it important or interesting to you? 
  > * What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
  > * What will be the input/output of your project?
  > * What are the features that the project provides?
