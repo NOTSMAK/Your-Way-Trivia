@@ -5,7 +5,7 @@
  > Your author list below should include links to all members GitHub (remove existing author).
 
 
- > Authors: \<[Jeffrey McDaniel](https://github.com/jmcda001)\>
+ > Authors: \[Jeffrey McDaniel](https://github.com/jmcda001)\
  
  > Authors: \[Ryan Pinto](https://github.com/rpintobusiness)\, \[SM Kamal](https://github.com/notasim)\, \[Kim Nguyen](https://github.com/npqkim)\, \[Isaiah Gaines](https://github.com/Isaiah1520)\, \[Tris Hu](https://github.com/trisfaleel)\
 
