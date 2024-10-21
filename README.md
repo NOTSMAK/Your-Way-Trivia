@@ -5,9 +5,9 @@
  > Your author list below should include links to all members GitHub (remove existing author).
 
 
- > Authors: \<[Jeffrey McDaniel](https://github.com/jmcda001)\
+ > Authors: \ [Jeffrey McDaniel](https://github.com/jmcda001)\
  
- > Authors: \<[Ryan Pinto](https://github.com/rpintobusiness)\, \<[SM Kamal](https://github.com/notasim)\, \<[Kim Nguyen](https://github.com/npqkim)\, \<[Isaiah Gaines](https://github.com/Isaiah1520)\, \<[Tris Hu](https://github.com/trisfaleel)\
+ > Authors: \ [Ryan Pinto](https://github.com/rpintobusiness)\, \ [SM Kamal](https://github.com/notasim)\, \ [Kim Nguyen](https://github.com/npqkim)\, \ [Isaiah Gaines](https://github.com/Isaiah1520)\, \ [Tris Hu](https://github.com/trisfaleel)\
 
  > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list and start thinking about the features you will implement. If you want to propose your own original idea, you will have to contact your instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings.
 
