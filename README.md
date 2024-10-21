@@ -3,9 +3,6 @@
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
 # \<Project title\>
  > Your author list below should include links to all members GitHub (remove existing author).
-
-
- > Authors: \ [Jeffrey McDaniel](https://github.com/jmcda001)\
  
  > Authors: [Ryan Pinto](https://github.com/rpintobusiness), [SM Kamal](https://github.com/notasim), [Kim Nguyen](https://github.com/npqkim), [Isaiah Gaines](https://github.com/Isaiah1520), and [Tris Hu](https://github.com/trisfaleel)
 
