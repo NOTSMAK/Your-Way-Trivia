@@ -19,7 +19,7 @@
 >
 > For the game logic and core mechanics, such as question generation, answer validation, and score calculation, we will be using C++. To structure and style the project, we will use HTML and CSS for our website format. JavaScript will also be used to enhance the game with visual effects. 
 >
-> Players input answers via keyboard and mouse input. They may also interact with various UI elements such as buttons to,  for example, start the game, submit answers, or navigate menus. The output will display said questions, feedback on correctness of answers, player scores, and interactive animations. It will also show a leaderboard.
+> Users input questions and answers via text file representing question pools. They may also interact with various UI elements such as buttons to,  for example, start the game, submit answers, or navigate menus. The output will display said questions, feedback on correctness of answers, player scores, and interactive animations. It will also show a leaderboard.
 >
 > There are three main features of this project. The first is the question and answer mechanism. This may take the form of multiple-choice or true/false and will be in differing subject categories. The second is the score tracking, which automatically keeps track of correctness and updates each player's score for the leaderboard. The third feature will be animations and visual feedback, which we hope to make the project appear more seamless and high quality. 
 
