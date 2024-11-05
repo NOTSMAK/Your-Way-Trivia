@@ -12,13 +12,13 @@
 > * All project phases are to be submitted to this GitHub repository. You should modify this README file to reflect the different phases of the project. In addition, you should regularly hold sprint meetings with your group. You will need to hold two to three scrum/check-in meetings with your lab TA/reader at different times in addition to the final demo.
 
 ## Project Description
- > Trivia is one of the world's most well-known and loved games. It can be an intense party game that combines logic, user interaction,  and fun visual elements. To apply and develop our programming skills, we wanted to recreate this famous game. 
->
-> For the game logic and core mechanics, such as question generation, answer validation, and score calculation, we will be using C++. To structure and style the project, we will use HTML and CSS for our website format. JavaScript will also be used to enhance the game with visual effects. 
->
-> Users input questions and answers via text file representing question pools. They may also interact with various UI elements such as buttons to,  for example, start the game, submit answers, or navigate menus. The output will display said questions, feedback on correctness of answers, player scores, and interactive animations. It will also show a leaderboard.
->
-> There are three main features of this project. The first is the question and answer mechanism. This may take the form of multiple-choice or true/false and will be in differing subject categories. The second is the score tracking, which automatically keeps track of correctness and updates each player's score for the leaderboard. The third feature will be animations and visual feedback, which we hope to make the project appear more seamless and high quality. 
+  Trivia is one of the world's most well-known and loved games. It can be an intense party game that combines logic, user interaction,  and fun visual elements. To apply and develop our programming skills, we wanted to recreate this famous game. 
+
+  For the game logic and core mechanics, such as question generation, answer validation, and score calculation, we will be using C++. To structure and style the project, we will use HTML and CSS for our website format. JavaScript will also be used to enhance the game with visual effects. 
+
+  Users input questions and answers via text file representing question pools. They may also interact with various UI elements such as buttons to,  for example, start the game, submit answers, or navigate menus. The output will display said questions, feedback on correctness of answers, player scores, and interactive animations. It will also show a leaderboard.
+
+  There are three main features of this project. The first is the question and answer mechanism. This may take the form of multiple-choice or true/false and will be in differing subject categories. The second is the score tracking, which automatically keeps track of correctness and updates each player's score for the leaderboard. The third feature will be animations and visual feedback, which we hope to make the project appear more seamless and high quality. 
 
  > ## Phase II
  > In addition to completing the "User Interface Specification" and "Class Diagram" sections below, you will need to:
@@ -42,7 +42,13 @@
 > Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs and expected output, or any graphical user interface components if applicable (e.g. buttons, text boxes, etc). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
 
 ## Class Diagram
- > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
+![umlClassDiagram](https://github.com/user-attachments/assets/6123b173-d7e7-42b4-ad85-e7292820afeb)
+Description: The 'Question' class is the base class for all types of questions. The attributes include the question prompt, the correct answer, and the answer given by the student. The methods are display() (which displays the question), checkAnswer() (which checks if the provided answer is correct), and serialize() (which converts question to a string format for saving).
+The 'QuestionPool' class stores a collection of questions read from a file. It is aggreagate to the 'Question' class.
+The 'TriviaGame' class represents a trivia game containing various questions and is aggregate to the 'QuestionPool' class. The attributes include the list of questions for the game and the title of the game.
+The 'GameManager' class is a collection of games where you are able to add more games, load and display previously created games, and save modified games.
+The 'User' class represents the user of 'Your Way Trivia - Trivia Maker Tool'. It contains attributes representing the username and the user's score.
+
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
