@@ -13,12 +13,11 @@ Authors: [Ryan Pinto](https://github.com/rpintobusiness), [SM Kamal](https://git
 
 ## User Interface Specification
 ### Navigation Diagram
-> Draw a diagram illustrating how the user can navigate from one screen to another. Here is an [example](https://creately.com/diagram/example/ikfqudv82/user-navigation-diagram-classic?r=v). It can be useful to label each symbol that represents a screen so that you can reference the screens in the next section or the rest of the document if necessary. Give a brief description of what the diagram represents.
 ![navDiagram](https://github.com/user-attachments/assets/cd21711c-f481-460a-8ba2-66aebc0d81e8)
-
+The diagram summarizes the user interactions. From the home menu, users can choose to start or create a game. Choosing to start a game leads the user to a loop that loads and prompts questions, while creating a game leads the user to another menu. Display messages will be provided to give user feedback before re-navigating back to a menu.
 
 ### Screen Layouts
-> Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs and expected output, or any graphical user interface components if applicable (e.g. buttons, text boxes, etc). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
+Since this is a terminal game, the screen layouts will appear as output to the console.Screen (1) displays the question when the program runs the game, which expects keyboard input of the letter corresponding to answer choice. Screens (2)-(4) display scores and final score at different stages of the game. Screen (5)-(6) give the user feedback to confirm their input was saved before renavigating to the menu. Screens (9) and (10) are both menus, with (10) being the home menu, which simply display numbers for users to input and navigate to.
 ![screenLayout(all)](https://github.com/user-attachments/assets/d9fda930-b513-47a1-a09a-1e2e37f508ff)
 
 
