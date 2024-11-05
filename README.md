@@ -34,10 +34,16 @@ Authors: [Ryan Pinto](https://github.com/rpintobusiness), [SM Kamal](https://git
 
 ## Class Diagram
 ![umlClassDiagram](https://github.com/user-attachments/assets/6123b173-d7e7-42b4-ad85-e7292820afeb)
-Description: The 'Question' class is the base class for all types of questions. The attributes include the question prompt, the correct answer, and the answer given by the student. The methods are display() (which displays the question), checkAnswer() (which checks if the provided answer is correct), and serialize() (which converts question to a string format for saving).
+Description: 
+
+The 'Question' class is the base class for all types of questions. The attributes include the question prompt, the correct answer, and the answer given by the student. The methods are display() (which displays the question), checkAnswer() (which checks if the provided answer is correct), and serialize() (which converts question to a string format for saving).
+
 The 'QuestionPool' class stores a collection of questions read from a file. It is aggreagate to the 'Question' class.
+
 The 'TriviaGame' class represents a trivia game containing various questions and is aggregate to the 'QuestionPool' class. The attributes include the list of questions for the game and the title of the game.
+
 The 'GameManager' class is a collection of games where you are able to add more games, load and display previously created games, and save modified games.
+
 The 'User' class represents the user of 'Your Way Trivia - Trivia Maker Tool'. It contains attributes representing the username and the user's score.
 
  
