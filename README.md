@@ -13,7 +13,7 @@ Authors: [Ryan Pinto](https://github.com/rpintobusiness), [SM Kamal](https://git
 
 ## User Interface Specification
 ### Navigation Diagram
-![navDiagram](https://github.com/user-attachments/assets/cd21711c-f481-460a-8ba2-66aebc0d81e8)
+![naviDiagram(2)](https://github.com/user-attachments/assets/0e723ce4-c689-440c-a7a7-8809dfe62dfd)
 The diagram summarizes the user interactions. From the home menu, users can choose to start or create a game. Choosing to start a game leads the user to a loop that loads and prompts questions, while creating a game leads the user to another menu. Display messages will be provided to give user feedback before re-navigating back to a menu.
 
 ### Screen Layouts
