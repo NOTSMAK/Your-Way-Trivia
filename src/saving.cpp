@@ -23,14 +23,19 @@ void savedQuiz::saveQuiz(const string& quizName) {
             savingQuiz << "MCQ" << endl;
             savingQuiz << question.at(i) << endl;
             for (int j = 0; j < options.at(j).size(); j++) {
-                savingQuiz << options.at(i).at(j);
+                savingQuiz << options.at(i).at(j) << endl;
             }
+            savingQuiz << answer.at(i) << endl;
         }
         else if (type == 2) {
             savingQuiz << "OWA" << endl;
+            savingQuiz << question.at(i) << endl;
+            savingQuiz << answer.at(i) << endl;
         }
         else if (type == 3) {
             savingQuiz << "TOF" << endl;
+            savingQuiz << question.at(i) << endl;
+            savingQuiz << answer.at(i) << endl;
         }
     }
     savingQuiz.close();
