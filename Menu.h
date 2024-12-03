@@ -17,10 +17,7 @@ public:
     void viewLeaderboad() const; // opens leaderboard file and prints it to terminal
    
     //running game functions
-
     void run(TriviaGame* game); // display questions, current score, and correct and user answers
-    
-    
 };
 
 class TriviaGame {
@@ -45,6 +42,7 @@ public:
     virtual void display() const = 0; // display
     virtual bool checkAnswer(const string& userAnswer) const = 0; // check answer function
     virtual string serialize() const = 0;
+    void scoreCounter();
     virtual ~Question() = default; 
 };
 

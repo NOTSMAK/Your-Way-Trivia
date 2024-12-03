@@ -72,17 +72,60 @@ void GameManager::StartGame(string savedFile) const {
         cout << "Error: No game found with the title " << savedFile << endl;
         return;
     }
+    int score = 0;
     if(checker >= 1) {
       QuestionPool* newPool = currGame->getPool();
+      string pompt = "Answer: " ;
+        string userAns;
       for ( auto&  question : newPool->pool) {
-       question->display();
-//NOT DONE
+         if (question->checkAnswer(userAns)) {
+            cout << "Correct!" << endl;
+            score++;
+        } else {
+            cout << "Incorrect. The correct answer was: " << question->serialize() << endl;
+        }
+        cout << endl;
+      }
 
       }
 
     }
 
     
-    
+    string GameManager::createGame() {
+    cout << "Enter the title of the new game: ";
+    string title;
+    cin.ignore(); 
+    getline(cin, title);
 
+    TriviaGame* newGame = new TriviaGame();
+    newGame->loadFromPool("default_questions.txt", "format");
+    newGame->randomizePool();
+
+    games.push_back(newGame); 
+    cout << "Game created: " << title << endl;
+    return title;
 }
+
+void GameManager::loadGame(const string& filePath) {
+    TriviaGame* loadedGame = new TriviaGame();
+    loadedGame->loadFromPool(filePath, "format");
+    games.push_back(loadedGame);
+    cout << "Game loaded successfully from " << filePath << endl;
+}
+
+void GameManager::viewLeaderboad() const {
+    cout << "Viewing leaderboard..." << endl;
+    ifstream file("leaderboard.txt");
+    if (!file.is_open()) {
+        cerr << "Failed to open leaderboard file." << endl;
+        return;
+    }
+
+    string line;
+    while (getline(file, line)) {
+        cout << line << endl;
+    }
+    file.close();
+}
+
