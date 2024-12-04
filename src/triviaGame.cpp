@@ -10,9 +10,9 @@ using namespace std;
 int main() {
 
     string question;
-    string title;
+    string title  ;
     int type;
-    int qCount
+    int qCount;
 
     triviaGame newTriviaGame; //MAIN GAME
 
@@ -21,13 +21,13 @@ int main() {
     newTriviaGame.setTitle(title);
 
     cout << "How many questions would you like to add?" << endl;
-    getline(cin, qCount);
+    cin >> qCount;
     while(qCount >= 1){
 
     vector<string> answerChoices;
 
     cout << "What type of question would you like to add? (1|MPQ (Multiple Choice Question), 2|OWA (One Word Answer), 3|TF (True or false)):" << endl;
-    getline(cin, type);
+   cin >> type;
     newTriviaGame.addType(type);
 
     cout << "Enter question:" << endl;;
@@ -62,18 +62,18 @@ int main() {
         vector<string> OWA;
         cout << "Enter one word answer" << endl;
         getline(cin,answer);
-        newTriviaGame.addAnswer(answerChoices);
+        newTriviaGame.addAnswer(answer);
 
         
 
     }
     if(type == 3) //TF
     {
-        int answerT;
+        string answer;
         vector<string> OWA;
         cout << "Enter 1 or 0 (True or False):" << endl;
-        getline(cin,answerT);
-        newTriviaGame.addAnswer(answerChoices);
+        cin >> answer;
+        newTriviaGame.addAnswer(answer);
 
     }
 
