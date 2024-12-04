@@ -35,6 +35,9 @@ The 'GameManager' class is a collection of games where you are able to add more 
 
 The 'User' class represents the user of 'Your Way Trivia - Trivia Maker Tool'. It contains attributes representing the username and the user's score.
 
+## Updated Class Diagram
+![UML class](https://github.com/user-attachments/assets/1d31cb93-e4d2-4ced-a8d4-ddec255b61c9)
+
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
