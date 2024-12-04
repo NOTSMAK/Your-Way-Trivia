@@ -1,9 +1,9 @@
 #include <string>
 #include <vector>
 #include <iostream>
-#include "../header/gameManager.hpp"
 #include <fstream>
 #include <cctype>
+#include "../header/gameManager.hpp"
 
 using namespace std;
 
@@ -12,7 +12,6 @@ triviaGame gameManager::loadQuiz(const string& quizName) {
     quizInput.open(quizName + ".txt");
     if (quizInput.fail()) {
         cout << "Quiz does not exist.";
-        return;
     }
     triviaGame newGame;
     newGame.setTitle(quizName);
@@ -70,7 +69,7 @@ void gameManager::saveQuiz(triviaGame quizToSave) {
     quizInput.close();
     ofstream savingQuiz;
     savingQuiz.open(quizToSave.getTitle() + ".txt");
-    for (int i = 0; i < numberOfQuestions(); i++) {
+    for (int i = 0; i < quizToSave.numberOfQuestions(); i++) {
         if (quizToSave.getType(i) == 1) {
             savingQuiz << "MCQ" << endl;
             savingQuiz << quizToSave.getQuestion(i) << endl;
@@ -82,7 +81,7 @@ void gameManager::saveQuiz(triviaGame quizToSave) {
         else if (quizToSave.getType(i) == 2) {
             savingQuiz << "OWA" << endl;
             savingQuiz << quizToSave.getQuestion(i) << endl;
-            savingQuiz << "none";
+            savingQuiz << "none" << endl;
             savingQuiz << quizToSave.getAnswer(i) << endl;
         }
         else if (quizToSave.getType(i) == 3) {

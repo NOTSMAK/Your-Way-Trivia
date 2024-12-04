@@ -39,19 +39,20 @@ int main() {
     {
         string choice;
 
-        cout << "Enter first answer choice:" << endl;
+        cout << "Enter the correct answer:" << endl;
         getline(cin,choice);
+        newTriviaGame.addAnswer(choice);
         answerChoices.push_back(choice);
         
-        cout << "Enter second answer choice:" << endl;
+        cout << "Enter second wrong answer choice:" << endl;
         getline(cin,choice);
         answerChoices.push_back(choice);
 
-        cout << "Enter third answer choice:" << endl;
+        cout << "Enter third wrong answer choice:" << endl;
         getline(cin,choice);
         answerChoices.push_back(choice);
 
-        cout << "Enter fourth answer choice:" << endl;
+        cout << "Enter fourth wrong answer choice:" << endl;
         getline(cin,choice);
         answerChoices.push_back(choice);
 
@@ -80,7 +81,7 @@ int main() {
 
     qCount--;
     }
-    
+
     gameManager newGame;
     newGame.saveQuiz(newTriviaGame);
 }
