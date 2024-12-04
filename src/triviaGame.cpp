@@ -1,7 +1,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
-#include "../header/triviaGame.hpp"
+#include "../header/gameManager.hpp"
 #include <fstream>
 #include <cctype>
 
@@ -80,5 +80,7 @@ int main() {
 
     qCount--;
     }
-
+    
+    gameManager newGame;
+    newGame.saveQuiz(newTriviaGame);
 }
