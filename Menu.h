@@ -15,7 +15,7 @@ public:
     string createGame(); // returns game title
     void loadGame(const string& filePath);
     void viewLeaderboad() const; // opens leaderboard file and prints it to terminal
-   
+    void saveGameToFile(const string& title, TriviaGame* game);
     //running game functions
     void run(TriviaGame* game); // display questions, current score, and correct and user answers
 };

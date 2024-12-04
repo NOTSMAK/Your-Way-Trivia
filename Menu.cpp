@@ -16,8 +16,8 @@ void GameManager::displayOptions() {
     cin >> userInput;
     while(!(cin >> userInput) || userInput < 1 || userInput > 5){
         cout << "Invalid Input. Choose 1 of the 5 options! " << endl;
-         cin.clear(); // Clear the error flag 
-        cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard invalid input
+         cin.clear(); 
+        cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
     }
     if(userInput  == 1 ){
         int chooseTrivia;
@@ -90,7 +90,6 @@ void GameManager::StartGame(string savedFile) const {
       }
 
     }
-
     
     string GameManager::createGame() {
     cout << "Enter the title of the new game: ";
@@ -101,17 +100,16 @@ void GameManager::StartGame(string savedFile) const {
     TriviaGame* newGame = new TriviaGame();
     newGame->loadFromPool("default_questions.txt", "format");
     newGame->randomizePool();
-
+    
     games.push_back(newGame); 
+     saveGameToFile(title, newGame);
     cout << "Game created: " << title << endl;
     return title;
 }
 
+
 void GameManager::loadGame(const string& filePath) {
-    TriviaGame* loadedGame = new TriviaGame();
-    loadedGame->loadFromPool(filePath, "format");
-    games.push_back(loadedGame);
-    cout << "Game loaded successfully from " << filePath << endl;
+    
 }
 
 void GameManager::viewLeaderboad() const {
@@ -128,4 +126,15 @@ void GameManager::viewLeaderboad() const {
     }
     file.close();
 }
-
+void GameManager::saveGameToFile(const string& title, TriviaGame* game) {
+        ofstream outFile("games.txt", ios::app); // Open in append mode
+        if (outFile.is_open()) {
+            outFile << "Title: " << title << endl;
+            outFile << "---------------------------" << endl;
+            outFile << game << endl;
+            outFile.close();
+            cout << "Game saved to file." << endl;
+        } else {
+            cout << "Error: Could not open file to save the game." << endl;
+        }
+    }
