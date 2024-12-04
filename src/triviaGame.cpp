@@ -27,7 +27,8 @@ int main() {
     vector<string> answerChoices;
 
     cout << "What type of question would you like to add? (1|MPQ (Multiple Choice Question), 2|OWA (One Word Answer), 3|TF (True or false)):" << endl;
-   cin >> type;
+    cin >> type;
+    cin.ignore();
     newTriviaGame.addType(type);
 
     cout << "Enter question:" << endl;;
