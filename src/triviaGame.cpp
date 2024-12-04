@@ -8,7 +8,6 @@
 using namespace std;
 
 int main() {
-
     string question;
     string title  ;
     int type;
@@ -79,5 +78,4 @@ int main() {
 
     qCount--;
     }
-
 }
