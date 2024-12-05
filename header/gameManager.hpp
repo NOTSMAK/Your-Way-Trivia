@@ -6,7 +6,7 @@
 #include "./triviaGame.hpp"
 
 class gameManager : triviaGame {
-    protected:
+    public:
     
     void saveQuiz (triviaGame quizToSave);
     void loadQuiz (const std::string& quizName);
