@@ -7,57 +7,61 @@
 
 using namespace std;
 
-triviaGame gameManager::loadQuiz(const string& quizName) {
+void gameManager::loadQuiz(const string& quizName) {
     ifstream quizInput;
     quizInput.open(quizName + ".txt");
+    triviaGame newGame;
     if (quizInput.fail()) {
-        cout << "Quiz does not exist.";
+        cout << "Quiz with that name does not exist.";
         return;
     }
-    triviaGame newGame;
     newGame.setTitle(quizName);
-    string fileOutString = "";
-    int type = 0;
     while (!quizInput.eof()) {
-        getline(quizInput, fileOutString);
-        if (fileOutString == "MCQ") {
-            newGame.addType(1);
+        int type = 0;
+        string inputType;
+        string inputQuestion;
+        answerOption inputOption;
+        string answer;
+        bool answerCorrectness;
+        getline(quizInput, inputType);
+        if (inputType == "MCQ") {
             type = 1;
         }
-        if (fileOutString == "OWA") {
-            newGame.addType(2);
+        if (inputType == "OWA") {
             type = 2;
         }
-        if (fileOutString == "TOF") {
-            newGame.addType(3);
+        if (inputType == "TOF") {
             type = 3;
         }
         if (type == 1) {
-            getline(quizInput, fileOutString);
-            newGame.addQuestion(fileOutString);
-            vector<string> possibleOptions;
-            for (int i = 0; i < 4; i++) {
-                getline(quizInput, fileOutString);
-                possibleOptions.push_back(fileOutString);
+            getline(quizInput, inputQuestion);
+            getline(quizInput, answer);
+            quizInput >> answerCorrectness;
+            quizInput.ignore();
+            inputOption.answer = answer;
+            inputOption.isCorrect = answerCorrectness;
+            newGame.addQuestion(type, inputQuestion, inputOption);
+            for (int i = 0; i < 3; i++) {
+                getline(quizInput, answer);
+                quizInput >> answerCorrectness;
+                quizInput.ignore();
+                answerOption additionalOption;
+                additionalOption.answer = answer;
+                additionalOption.isCorrect = answerCorrectness;
+                newGame.addQuestionOption(additionalOption);
             }
-            newGame.addOptions(possibleOptions);
-            getline(quizInput, fileOutString);
-            newGame.addAnswer(fileOutString);
         }
         else if (type == 2 || type == 3) {
-            getline(quizInput, fileOutString);
-            newGame.addQuestion(fileOutString);
-            getline(quizInput, fileOutString);
-            vector<string> emptyVector;
-            emptyVector.push_back("");
-            newGame.addOptions( emptyVector );
-            getline(quizInput, fileOutString);
-            newGame.addAnswer(fileOutString);
+            getline(quizInput, inputQuestion);
+            getline(quizInput, answer);
+            quizInput >> answerCorrectness;
+            quizInput.ignore();
+            inputOption.answer = answer;
+            inputOption.isCorrect = true;
+            newGame.addQuestion(type, inputQuestion, inputOption);
         }
     }
     quizInput.close();
-
-    return newGame;
 }
 
 void gameManager::saveQuiz(triviaGame quizToSave) {
@@ -70,26 +74,26 @@ void gameManager::saveQuiz(triviaGame quizToSave) {
     quizInput.close();
     ofstream savingQuiz;
     savingQuiz.open(quizToSave.getTitle() + ".txt");
-    for (int i = 0; i < numberOfQuestions(); i++) {
+    for (int i = 0; i < numQuestions(); i++) {
         if (quizToSave.getType(i) == 1) {
             savingQuiz << "MCQ" << endl;
             savingQuiz << quizToSave.getQuestion(i) << endl;
             for (int j = 0; j < 4; j++) {
-                savingQuiz << quizToSave.getOptions(i).at(j) << endl;
+                savingQuiz << quizToSave.getAnswer(i, j) << endl;
+                savingQuiz << quizToSave.getAnswerCorrectness(i, j) << endl;
             }
-            savingQuiz << quizToSave.getAnswer(i) << endl;
         }
         else if (quizToSave.getType(i) == 2) {
             savingQuiz << "OWA" << endl;
             savingQuiz << quizToSave.getQuestion(i) << endl;
-            savingQuiz << "none";
-            savingQuiz << quizToSave.getAnswer(i) << endl;
+            savingQuiz << quizToSave.getAnswer(i, 0) << endl;
+            savingQuiz << quizToSave.getAnswerCorrectness(i, 0);
         }
         else if (quizToSave.getType(i) == 3) {
             savingQuiz << "TOF" << endl;
             savingQuiz << quizToSave.getQuestion(i) << endl;
-            savingQuiz << "none" << endl;
-            savingQuiz << quizToSave.getAnswer(i) << endl;
+            savingQuiz << quizToSave.getAnswer(i, 0) << endl;
+            savingQuiz << quizToSave.getAnswerCorrectness(i, 0);
         }
     }
     savingQuiz.close();

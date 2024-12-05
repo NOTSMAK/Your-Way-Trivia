@@ -1,10 +1,15 @@
+#ifndef game_manager_H
+#define game_manager_H
+
 #include <string>
 #include <vector>
-#include "../header/triviaGame.hpp"
+#include "./triviaGame.hpp"
 
 class gameManager : triviaGame {
     protected:
     
     void saveQuiz (triviaGame quizToSave);
-    triviaGame loadQuiz (const std::string& quizName);
+    void loadQuiz (const std::string& quizName);
 };
+
+#endif
