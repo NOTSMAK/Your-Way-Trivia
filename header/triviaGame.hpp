@@ -1,25 +1,29 @@
+#ifndef trivia_game_H
+#define trivia_game_H
+
 #include <string>
 #include <vector>
-using namespace std;
-class triviaGame {
+#include "./question.hpp"
 
-    string title;
-    vector<int> type;
-    vector<string> question;
-    vector<vector<string>> options;  
-    vector<string> answer;
+using namespace std;
+
+class triviaGame : Question {
+    std::string title;
+    std::vector<Question> questions;
 
     public:
 
-    void setTitle (const string& newTitle) { title = newTitle; }
-    void addType (const int& newType) { type.push_back(newType); }
-    void addQuestion (const string& newQuestion) { question.push_back(newQuestion); }
-    void addOptions (vector<string> newOptions) { options.push_back(newOptions); }
-    void addAnswer (const string& newAnswer) { answer.push_back(newAnswer); }
-    int numberOfQuestions() {return question.size();}
-    const string& getTitle() {return title;}
-    int getType(int questionIndex) {return type.at(questionIndex);}
-    const string& getQuestion(int questionIndex) {return question.at(questionIndex);}
-    const vector<string>& getOptions(int questionIndex) {return options.at(questionIndex);}
-    const string& getAnswer(int questionIndex) {return answer.at(questionIndex);}
+    triviaGame();
+    void setTitle(std::string title) { this->title = title; }
+    void addQuestion(int type, std::string question, answerOption option) { questions.push_back(Question(type, question, option)); }
+    void addQuestionOption(answerOption option) { options.push_back(option); }
+    const int numQuestions() { return questions.size(); }
+    const string& getTitle() { return title; }
+    const int getType(int questionIndex) { return questions.at(questionIndex).type; }
+    const string& getQuestion(int questionIndex) { return questions.at(questionIndex).question; }
+    const string& getAnswer(int questionIndex, int answerIndex) { return questions.at(questionIndex).getAnswer(answerIndex); }
+    const bool& getAnswerCorrectness(int questionIndex, int answerIndex) { return questions.at(questionIndex).getAnswerCorrectness(answerIndex); }
 };
+
+#endif
+
