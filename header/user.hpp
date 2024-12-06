@@ -7,7 +7,7 @@ private:
     int score = 0;
 
 public:
-    
+    User(const string& uname, int scr) : username(uname), score(scr) {}
     void playGame();
     void createGame();
     string getName() const { return name; }
@@ -15,4 +15,5 @@ public:
     void setName(string userName) {name = userName;}
     int getScore() const { return score; }
     void updateScore(int newScore) { score = newScore; }
+    
 };
