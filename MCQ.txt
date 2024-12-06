@@ -8,3 +8,13 @@ Kamala
 0
 Elon Musk
 0
+MCQ
+Who is the CEO of Microsoft?
+Bill
+1
+Satya
+0
+Elon
+0
+Steve
+0

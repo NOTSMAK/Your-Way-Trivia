@@ -288,6 +288,10 @@ void gameManager::playGame() {
     cout << "STARTING GAME...." << endl << endl << endl;
     triviaGame newGame;
     newGame = loadQuiz(quizName);
+    if(newGame.getTitle() == "") {
+        cout << "Game does not exist." << endl;
+        return;
+    }
  int score = 0;
 
  string userAnswer;
@@ -298,20 +302,27 @@ for (i = 0; i < newGame.numQuestions(); i++) {
         for (int j = 0; j < 4; j++) {
             cout << j + 1 << ". " << newGame.getAnswer(i, j) << endl;
         }
-        for(int k = 0; k < 4; k++){
-            cin >> userAnswer;
+        cin >> userAnswer;
+        bool isCorrect = false;
+        for(int k = 0; k < 4; k++){ 
             if(userAnswer == newGame.getAnswer(i, k) && newGame.getAnswerCorrectness(i, k) == true) {
                 score++;
-                break;
+                isCorrect = true;
             }
         }
-        cout << "wrong answer!! - - - current score " << score << endl;
+        if(isCorrect) {
+            cout << "Correct Answer!! - - - current score " << score << endl;
+        } else {
+            cout << "wrong answer!! - - - current score " << score << endl;
+        }
+       
     }
     else if (newGame.getType(i) == 2) {
         cout << "Enter your answer: " << endl;
         cin >> userAnswer;
         if (userAnswer == newGame.getAnswer(i, 0)) {
             score++;
+            cout << "Correct Answer!! - - - current score " << score << endl;
         }
         else{
             cout << "wrong answer!! - - - current score " << score << endl;
@@ -335,7 +346,7 @@ for (i = 0; i < newGame.numQuestions(); i++) {
 cout << "Game Over!" << endl;
     cout << "Game name: " << quizName << endl;
     cout << "Name: " << userName << endl;
-    cout << "Final Score: " << score << " / " << i+1 << endl << endl << endl;
+    cout << "Final Score: " << score << " / " << newGame.numQuestions()<< endl << endl << endl;
 }
 
 
