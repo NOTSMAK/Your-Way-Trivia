@@ -8,8 +8,10 @@
 class gameManager : triviaGame {
     public:
     
-    void saveQuiz (triviaGame quizToSave);
-    void loadQuiz (const std::string& quizName);
+    void saveQuiz(triviaGame quizToSave);
+    void loadQuiz(const std::string& quizName);
+    void playGame();
+    void createGame();
 };
 
 #endif
