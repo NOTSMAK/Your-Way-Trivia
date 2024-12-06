@@ -281,10 +281,13 @@ void gameManager::createGame() {
 void gameManager::playGame() {
     string userName;
     string quizName;
+    string ignoredGetLine;
     cout << "Enter Username: " ;
     cin >> userName;
+    getline(cin, ignoredGetLine);
     cout << "Enter Quiz Name (no spaces):" ;
     cin >> quizName;
+    getline(cin, ignoredGetLine);
     cout << "STARTING GAME...." << endl << endl << endl;
     triviaGame newGame;
     newGame = loadQuiz(quizName);
@@ -302,7 +305,16 @@ for (i = 0; i < newGame.numQuestions(); i++) {
         for (int j = 0; j < 4; j++) {
             cout << j + 1 << ". " << newGame.getAnswer(i, j) << endl;
         }
-        cin >> userAnswer;
+        getline(cin, userAnswer);
+        if (userAnswer == "1") {
+            userAnswer = newGame.getAnswer(i, 0);
+        } else if (userAnswer == "2") {
+            userAnswer = newGame.getAnswer(i, 1);
+        } else if (userAnswer == "3") {
+            userAnswer = newGame.getAnswer(i, 2);
+        } else if (userAnswer == "4") {
+            userAnswer = newGame.getAnswer(i, 3);
+        }
         bool isCorrect = false;
         for(int k = 0; k < 4; k++){ 
             if(userAnswer == newGame.getAnswer(i, k) && newGame.getAnswerCorrectness(i, k) == true) {
@@ -320,6 +332,7 @@ for (i = 0; i < newGame.numQuestions(); i++) {
     else if (newGame.getType(i) == 2) {
         cout << "Enter your answer: " << endl;
         cin >> userAnswer;
+        getline(cin, ignoredGetLine);
         if (userAnswer == newGame.getAnswer(i, 0)) {
             score++;
             cout << "Correct Answer!! - - - current score " << score << endl;
@@ -327,19 +340,29 @@ for (i = 0; i < newGame.numQuestions(); i++) {
         else{
             cout << "wrong answer!! - - - current score " << score << endl;
         }
-        
     }
     else if (newGame.getType(i) == 3) {
         cout << "Enter your answer (1 = true, 0 = false): ";
         cin >> userAnswer;
-        if (userAnswer == "1" && newGame.getAnswer(i, 0) == "true") {
-            score++;
-        }
-        else if (userAnswer == "0" && newGame.getAnswer(i, 0) == "false") {
-            score++;
-        }
-        else{
-            cout << "wrong answer!! - - - current score  " << score << endl;
+        getline(cin, ignoredGetLine);
+        while (true) {
+            if (userAnswer == "1" && newGame.getAnswer(i, 0) == "true") {
+                score++;
+                break;
+            }
+            else if (userAnswer == "0" && newGame.getAnswer(i, 0) == "false") {
+                score++;
+                break;
+            }
+            else if (userAnswer != "1" && userAnswer != "0") {
+                cout << "Please answer with 1 or 0. Try again:" << endl;
+                cin >> userAnswer;
+                getline(cin, ignoredGetLine);
+            }
+            else{
+                cout << "wrong answer!! - - - current score  " << score << endl;
+                break;
+            }
         }
     }
 }
@@ -366,6 +389,7 @@ void gameManager::readGameFiles(){
     cout << endl << endl << endl;
     gameFile.close();
 }
+
 void gameManager::addToGameFiles (string gameName){
     fstream gameFile;
     string gameFileName = "savedGameNames.txt";
