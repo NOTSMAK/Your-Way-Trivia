@@ -1,1 +1,11 @@
-r
+Cars
+ChristmasTrivia
+Fitness
+MathTest
+MCQ
+OWA
+Technology
+TF
+Thanksgiving
+Triple
+Trivia
