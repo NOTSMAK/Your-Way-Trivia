@@ -1,5 +1,6 @@
 #include <string>
 #include <vector>
+
 using namespace std;
 class User {
 private:
@@ -7,9 +8,7 @@ private:
     int score = 0;
 
 public:
-    
-    void playGame();
-    void createGame();
+    User() {}
     string getName() const { return name; }
     void setScore(int userScore) {score = userScore; }
     void setName(string userName) {name = userName;}
