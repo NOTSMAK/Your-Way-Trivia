@@ -32,7 +32,7 @@ Halloween
 0
 Christmas
 0
-Independence Day
+IndependenceDay
 0
 TOF
 Did the first Thanksgiving feast include cranberry sauce?

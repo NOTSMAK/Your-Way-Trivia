@@ -30,13 +30,13 @@ O2
 0
 MCQ
 Who wrote the play Romeo and Juliet?
-Charles Dickens
+CharlesDickens
 0
-Mark Twain
+MarkTwain
 0
-William Shakespeare
+WilliamShakespeare
 1
-Jane Austen
+JaneAusten
 0
 MCQ
 Which animal is known as the "King of the Jungle"?

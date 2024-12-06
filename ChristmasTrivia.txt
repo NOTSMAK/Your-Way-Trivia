@@ -1,12 +1,12 @@
 MCQ
 What is Santa Claus also known as?
-Father Christmas
+FatherChristmas
 1
-Saint Nicholas
+SaintNicholas
 0
-The Grinch
+TheGrinch
 0
-Easter Bunny
+EasterBunny
 0
 MCQ
 What color is Santa Claus's suit?
@@ -22,9 +22,9 @@ MCQ
 What do children traditionally leave out for Santa on Christmas Eve?
 Cookies and Milk
 1
-Pizza and Soda
+Pizza&Soda
 0
-Ice Cream
+IceCream
 0
 Candy
 0
@@ -46,9 +46,9 @@ Prancer
 0
 MCQ
 Where does Santa Claus live?
-North Pole
+NorthPole
 1
-South Pole
+SouthPole
 0
 Greenland
 0
