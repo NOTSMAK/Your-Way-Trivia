@@ -69,10 +69,11 @@ void gameManager::saveQuiz(triviaGame quizToSave) {
         cout << "Quiz with that name already exists.";
         return;
     }
-    quizInput.close();
+    quizInput.close(); 
     ofstream savingQuiz;
     savingQuiz.open(quizToSave.getTitle() + ".txt");
-    for (int i = 0; i < numQuestions(); i++) {
+    for (int i = 0; i < quizToSave.numQuestions(); i++) {
+        savingQuiz << "MCQ" << endl;
         if (quizToSave.getType(i) == 1) {
             savingQuiz << "MCQ" << endl;
             savingQuiz << quizToSave.getQuestion(i) << endl;

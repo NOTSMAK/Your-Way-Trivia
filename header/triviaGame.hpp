@@ -12,8 +12,7 @@ class triviaGame : Question {
     std::vector<Question> questions;
 
     public:
-
-    triviaGame();
+    triviaGame() : title("Untitled") {}
     void setTitle(std::string title) { this->title = title; }
     void addQuestion(int type, std::string question, answerOption option) { questions.push_back(Question(type, question, option)); }
     void addQuestionOption(answerOption option) { options.push_back(option); }

@@ -42,11 +42,14 @@ int main() {
             getline(cin,choice);
             cout << "Will this answer be true or false (1 = true, 0 = false)?" << endl;
             cin >> isCorrect;
-            cin.ignore();
+            cout << "input option answer" << endl;
             inputOption.answer = choice;
+            cout << "input option is correct" << endl;
             inputOption.isCorrect = isCorrect;
+            cout << "add question" << endl;
             newTriviaGame.addQuestion(type, question, inputOption);
-            
+            cin.ignore();
+
             for (int i = 2; i < 5; i++) {
                 answerOption additionalOption;
                 cout << "Enter answer choice " << i << ":" << endl;
