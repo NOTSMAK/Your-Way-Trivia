@@ -1,0 +1,10 @@
+MCQ
+Who is our president?
+Biden
+0
+Trump
+1
+Kamala
+0
+Elon Musk
+0
