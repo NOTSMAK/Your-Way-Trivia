@@ -1,6 +1,6 @@
 OWA
 What does "CPU" stand for?
-Central Processing Unit
+CentralProcessingUnit
 TOF
 Is a smartphone a type of computer?
 true
@@ -36,10 +36,10 @@ Is a monitor an output device?
 true
 OWA
 What does "HTTP" stand for?
-Hypertext Transfer Protocol
+HyperTextTransferProtocol
 TOF
 Can a tablet be used for browsing the internet?
 true
 OWA
 What does "GPU" stand for?
-Graphics Processing Unit
+GraphicsProcessingUnit
