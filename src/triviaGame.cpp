@@ -9,7 +9,7 @@ using namespace std;
 
 int main() {
     string question;
-    string title  ;
+    string title;
     int type;
     int qCount;
 
@@ -23,64 +23,75 @@ int main() {
     cin >> qCount;
     while(qCount >= 1){
 
-    vector<string> answerChoices;
+        cout << "What type of question would you like to add? (1|MPQ (Multiple Choice Question), 2|OWA (One Word Answer), 3|TF (True or false)):" << endl;
+        cin >> type;
+        cin.ignore();
 
-    cout << "What type of question would you like to add? (1|MPQ (Multiple Choice Question), 2|OWA (One Word Answer), 3|TF (True or false)):" << endl;
-    cin >> type;
-    cin.ignore();
-    newTriviaGame.addType(type);
+        cout << "Enter question:" << endl;;
+        getline(cin, question);
 
-    cout << "Enter question:" << endl;;
-    getline(cin, question);
-    newTriviaGame.addQuestion(question);
+        answerOption inputOption;
 
-    if (type == 1) //MPQ
-    {
-        string choice;
+        if (type == 1) //MPQ
+        {
+            string choice;
+            bool isCorrect;
+            
 
-        cout << "Enter the correct answer:" << endl;
-        getline(cin,choice);
-        newTriviaGame.addAnswer(choice);
-        answerChoices.push_back(choice);
-        
-        cout << "Enter second wrong answer choice:" << endl;
-        getline(cin,choice);
-        answerChoices.push_back(choice);
+            cout << "Enter answer choice 1:" << endl;
+            getline(cin,choice);
+            cout << "Will this answer be true or false (1 = true, 0 = false)?" << endl;
+            cin >> isCorrect;
+            cin.ignore();
+            inputOption.answer = choice;
+            inputOption.isCorrect = isCorrect;
+            newTriviaGame.addQuestion(type, question, inputOption);
+            
+            for (int i = 2; i < 5; i++) {
+                answerOption additionalOption;
+                cout << "Enter answer choice " << i << ":" << endl;
+                getline(cin,choice);
+                cout << "Will this answer be true or false (1 = true, 0 = false)?" << endl;
+                cin >> isCorrect;
+                cin.ignore();
+                additionalOption.answer = choice;
+                additionalOption.isCorrect = isCorrect;
+                newTriviaGame.addQuestionOption(additionalOption);
+            }
+        }
+        if(type == 2) //OWA
+        {
+            string answer;
+            cout << "Enter one word answer" << endl;
+            getline(cin,answer);
+            inputOption.answer = answer;
+            inputOption.isCorrect = true;
+            newTriviaGame.addQuestion(type, question, inputOption);
+        }
+        if(type == 3) //TF
+        {
+            string answer;
+            cout << "Enter answer as 1 or 0 (True or False):" << endl;
+            getline(cin,answer);
+            while (true) {
+                if (answer == "1") {
+                    inputOption.answer = "true";
+                    break;
+                } else if (answer == "0"){
+                    inputOption.answer = "false";
+                    break;
+                } else {
+                    cout << "Not a valid input try again:" << endl;
+                    getline(cin,answer);
+                }
+            }
+            inputOption.isCorrect = true;
+            newTriviaGame.addQuestion(type, question, inputOption);
+        }
 
-        cout << "Enter third wrong answer choice:" << endl;
-        getline(cin,choice);
-        answerChoices.push_back(choice);
-
-        cout << "Enter fourth wrong answer choice:" << endl;
-        getline(cin,choice);
-        answerChoices.push_back(choice);
-
-        newTriviaGame.addOptions(answerChoices);
+        qCount--;
     }
-    if(type == 2) //OWA
-    {
-        string answer;
-        vector<string> OWA;
-        cout << "Enter one word answer" << endl;
-        getline(cin,answer);
-        newTriviaGame.addAnswer(answer);
-
-        
-
-    }
-    if(type == 3) //TF
-    {
-        string answer;
-        vector<string> OWA;
-        cout << "Enter 1 or 0 (True or False):" << endl;
-        cin >> answer;
-        newTriviaGame.addAnswer(answer);
-
-    }
-
-    qCount--;
-    }
-
-    gameManager newGame;
-    newGame.saveQuiz(newTriviaGame);
+    
+    gameManager gameToSave;
+    gameToSave.saveQuiz(newTriviaGame);
 }

@@ -22,7 +22,6 @@ void gameManager::loadQuiz(const string& quizName) {
         string inputQuestion;
         answerOption inputOption;
         string answer;
-        bool answerCorrectness;
         getline(quizInput, inputType);
         if (inputType == "MCQ") {
             type = 1;
@@ -34,6 +33,7 @@ void gameManager::loadQuiz(const string& quizName) {
             type = 3;
         }
         if (type == 1) {
+            bool answerCorrectness;
             getline(quizInput, inputQuestion);
             getline(quizInput, answer);
             quizInput >> answerCorrectness;
@@ -54,8 +54,6 @@ void gameManager::loadQuiz(const string& quizName) {
         else if (type == 2 || type == 3) {
             getline(quizInput, inputQuestion);
             getline(quizInput, answer);
-            quizInput >> answerCorrectness;
-            quizInput.ignore();
             inputOption.answer = answer;
             inputOption.isCorrect = true;
             newGame.addQuestion(type, inputQuestion, inputOption);
@@ -87,13 +85,11 @@ void gameManager::saveQuiz(triviaGame quizToSave) {
             savingQuiz << "OWA" << endl;
             savingQuiz << quizToSave.getQuestion(i) << endl;
             savingQuiz << quizToSave.getAnswer(i, 0) << endl;
-            savingQuiz << quizToSave.getAnswerCorrectness(i, 0);
         }
         else if (quizToSave.getType(i) == 3) {
             savingQuiz << "TOF" << endl;
             savingQuiz << quizToSave.getQuestion(i) << endl;
             savingQuiz << quizToSave.getAnswer(i, 0) << endl;
-            savingQuiz << quizToSave.getAnswerCorrectness(i, 0);
         }
     }
     savingQuiz.close();
