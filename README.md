@@ -70,20 +70,19 @@ The 'User' class represents the user of 'Your Way Trivia - Trivia Maker Tool'. I
 >  * Each team member should also submit the Individual Contributions Form on Canvas for this final phase. In this form, you need to fill in the names of all team members, the percentage of work contributed by each member for the final phase, and a description of their contributions. Remember that each team member should submit the form individually.
  
  ## Screenshots
-> Menu:
-
+Menu:
  <img width="612" alt="image" src="https://github.com/user-attachments/assets/287f0f33-5502-4faa-9ddb-02767e3bd467">
+
 > Starting Game:
-
  <img width="612" alt="image" src="https://github.com/user-attachments/assets/2e6b7314-91ff-4130-b622-b33aab334351">
+ 
 > Formatting of all Question Types:
-
  <img width="612" alt="image" src="https://github.com/user-attachments/assets/b4748c3b-a794-49d2-82ae-a4a8ab3c933f">
+ 
 > List of all available Quizzes:
-
  <img width="612" alt="image" src="https://github.com/user-attachments/assets/f1ab6d7b-cda6-4c8e-83bb-36ec558504b7">
-> Quiz Creation Tool:
-
+ 
+> Quiz Creation Tool: 
  <img width="612" alt="image" src="https://github.com/user-attachments/assets/7830a5ae-3a3a-4b30-bfb6-f5c51de53fcc">
 
  > Screenshots of the input/output after running your application
