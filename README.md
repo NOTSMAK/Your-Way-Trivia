@@ -87,7 +87,19 @@ The 'User' class represents the user of 'Your Way Trivia - Trivia Maker Tool'. I
 
  > Screenshots of the input/output after running your application
  ## Installation/Usage
- > Instructions on installing and running your application
+  #  To Install and Run 'Trivia Game'
+  **Clone the Repository**  
+   ```
+   git clone https://github.com/cs100/final-project-crazyfive.git
+   ```
+  **After cloning the repository, you can now compile it using the following commands**  
+  ```
+  g++ -o a src/gameManager.cpp src/main.cpp src/test_gameManager.cpp
+  ```
+  **Then after compiling the program, you can run it using the following command**
+  ```
+  ./a 
+  ```
  ## Testing
  > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
  
