@@ -285,7 +285,7 @@ void gameManager::playGame() {
     cout << "Enter Username: " ;
     cin >> userName;
     getline(cin, ignoredGetLine);
-    cout << "Enter Quiz Name (no spaces):" ;
+    cout << "Enter Quiz Name (no spaces): " ;
     cin >> quizName;
     getline(cin, ignoredGetLine);
     cout << "STARTING GAME...." << endl << endl << endl;
@@ -332,9 +332,9 @@ for (i = 0; i < newGame.numQuestions(); i++) {
             }
         }
         if(isCorrect) {
-            cout << "Correct Answer!! - - - current score " << score << endl;
+            cout << "Correct Answer! - Current score: " << score << endl;
         } else {
-            cout << "wrong answer!! - - - current score " << score << endl;
+            cout << "Wrong Answer! - Current score: " << score << endl;
         }          
     }
     else if (newGame.getType(i) == 2) {
@@ -343,10 +343,10 @@ for (i = 0; i < newGame.numQuestions(); i++) {
         getline(cin, ignoredGetLine);
         if (userAnswer == newGame.getAnswer(i, 0)) {
             score++;
-            cout << "Correct Answer!! - - - current score " << score << endl;
+            cout << "Correct Answer! - Current score: " << score << endl;
         }
         else{
-            cout << "wrong answer!! - - - current score " << score << endl;
+            cout << "Wrong Answer! - Current score: " << score << endl;
         }
     }
     else if (newGame.getType(i) == 3) {
@@ -356,10 +356,12 @@ for (i = 0; i < newGame.numQuestions(); i++) {
         while (true) {
             if (userAnswer == "1" && newGame.getAnswer(i, 0) == "true") {
                 score++;
+                cout << "Correct Answer! - Current score: " << score << endl;
                 break;
             }
             else if (userAnswer == "0" && newGame.getAnswer(i, 0) == "false") {
                 score++;
+                cout << "Correct Answer! - Current score: " << score << endl;            
                 break;
             }
             else if (userAnswer != "1" && userAnswer != "0") {
@@ -368,7 +370,7 @@ for (i = 0; i < newGame.numQuestions(); i++) {
                 getline(cin, ignoredGetLine);
             }
             else{
-                cout << "wrong answer!! - - - current score  " << score << endl;
+                cout << "Wrong Answer! - Current score:  " << score << endl;
                 break;
             }
         }
