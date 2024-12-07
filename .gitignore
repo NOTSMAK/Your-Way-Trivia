@@ -1,1 +1,36 @@
-.vscode/
+# Ignore build and output directories
+build/
+bin/
+lib/
+
+# Ignore CMake-generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+
+# Ignore executables and compiled binaries
+a.out
+*.o
+*.so
+*.a
+*.exe
+
+# Ignore test result files and logs
+*.txt
+
+# Ignore system files (MacOS, Windows, etc.)
+.DS_Store
+Thumbs.db
+
+# Ignore temporary or editor files
+*.swp
+*.swo
+*.bak
+*~
+*.tmp
+*.log
+
+# Ignore generated files in external libraries
+external/googletest/build/
