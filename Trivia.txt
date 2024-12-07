@@ -1,0 +1,50 @@
+MCQ
+What is the capital city of France?
+Rome
+0
+Berlin
+0
+Paris
+1
+Madrid
+0
+MCQ
+What is the largest planet in our solar system?
+Earth
+0
+Jupiter
+1
+Mars
+0
+Saturn
+0
+MCQ
+What is the chemical symbol for water?
+C02
+0
+H20
+1
+NaCl
+0
+O2
+0
+MCQ
+Who wrote the play Romeo and Juliet?
+CharlesDickens
+0
+MarkTwain
+0
+WilliamShakespeare
+1
+JaneAusten
+0
+MCQ
+Which animal is known as the "King of the Jungle"?
+Tiger
+0
+Lion
+1
+Elephant
+0
+Cheetah
+0

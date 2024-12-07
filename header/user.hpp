@@ -1,5 +1,9 @@
+#ifndef user_H
+#define user_H
+
 #include <string>
 #include <vector>
+
 using namespace std;
 class User {
 private:
@@ -7,9 +11,9 @@ private:
     int score = 0;
 
 public:
+  
     User(const string& uname, int scr) : name(uname), score(scr) {}
-    void playGame();
-    void createGame();
+    User() {}
     string getName() const { return name; }
     void setScore(int userScore) {score = userScore; }
     void setName(string userName) {name = userName;}
@@ -17,3 +21,5 @@ public:
     void updateScore(int newScore) { score = newScore; }
     
 };
+
+#endif

@@ -1,0 +1,65 @@
+MCQ
+What meat is traditionally served at Thanksgiving dinner?
+Turkey
+1
+Chicken
+0
+Beef
+0
+Pork
+0
+TOF
+Is Thanksgiving celebrated in November in the United States?
+true
+MCQ
+What is the name of the ship that brought the Pilgrims to America?
+Mayflower
+1
+Santa Maria
+0
+Pinta
+0
+Victoria
+0
+TOF
+Is pumpkin pie a popular Thanksgiving dessert?
+true
+MCQ
+Which U.S. holiday comes after Thanksgiving?
+Black Friday
+1
+Halloween
+0
+Christmas
+0
+IndependenceDay
+0
+TOF
+Did the first Thanksgiving feast include cranberry sauce?
+false
+MCQ
+What do people often watch on TV during Thanksgiving?
+Football
+1
+Baseball
+0
+Basketball
+0
+Tennis
+0
+TOF
+Is Thanksgiving a federal holiday in the United States?
+true
+MCQ
+What is a common side dish at Thanksgiving?
+Mashed Potatoes
+1
+Spaghetti
+0
+Tacos
+0
+Fried Rice
+0
+TOF
+Is Thanksgiving celebrated in October in Canada?
+true

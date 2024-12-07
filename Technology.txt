@@ -1,0 +1,45 @@
+OWA
+What does "CPU" stand for?
+CentralProcessingUnit
+TOF
+Is a smartphone a type of computer?
+true
+OWA
+What company makes the iPhone?
+Apple
+TOF
+Is Windows an operating system?
+true
+OWA
+What does "USB" stand for?
+Universal Serial Bus
+TOF
+Is a keyboard an input device?
+true
+OWA
+What does "Wi-Fi" allow devices to connect to?
+Internet
+TOF
+Is Java a programming language?
+true
+OWA
+What is the most popular search engine?
+Google
+TOF
+Is Linux free to use?
+true
+OWA
+What does "RAM" stand for?
+Random Access Memory
+TOF
+Is a monitor an output device?
+true
+OWA
+What does "HTTP" stand for?
+HyperTextTransferProtocol
+TOF
+Can a tablet be used for browsing the internet?
+true
+OWA
+What does "GPU" stand for?
+GraphicsProcessingUnit
