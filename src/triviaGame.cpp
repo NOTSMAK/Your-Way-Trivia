@@ -107,6 +107,7 @@ int main() {
                 newTriviaGame.addQuestionOption(additionalOption);
             }
         }
+        
         if(type == 2) //OWA
         {
             string answer;
