@@ -17,9 +17,6 @@ a.out
 *.a
 *.exe
 
-# Ignore test result files and logs
-*.txt
-
 # Ignore system files (MacOS, Windows, etc.)
 .DS_Store
 Thumbs.db
