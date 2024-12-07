@@ -1,4 +1,5 @@
-
+#ifndef leaderboard_H
+#define leaderboard_H
 
 #include <string>
 #include <vector>
@@ -15,3 +16,5 @@ public:
   
 
 };
+
+#endif

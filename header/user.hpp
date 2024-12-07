@@ -1,3 +1,6 @@
+#ifndef user_H
+#define user_H
+
 #include <string>
 #include <vector>
 
@@ -15,3 +18,5 @@ public:
     int getScore() const { return score; }
     void updateScore(int newScore) { score = newScore; }
 };
+
+#endif
