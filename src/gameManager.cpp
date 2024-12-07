@@ -403,7 +403,7 @@ void gameManager::readGameFiles(){
 void gameManager::addToGameFiles (string gameName){
     fstream gameFile;
     string gameFileName = "savedGameNames.txt";
-    gameFile.open(gameFileName, fstream::app);
+    gameFile.open(gameFileName);
     if (!gameFile) {
         cout << "Unable to open file." << endl;
         return;
