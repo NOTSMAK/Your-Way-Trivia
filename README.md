@@ -101,5 +101,9 @@ The 'User' class represents the user of 'Your Way Trivia - Trivia Maker Tool'. I
   ./a 
   ```
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README
+ > Our project was tested and vailidated using gtest and CI.
+ > We were able to test our project by creating unit tests.
+ > We created a folder called tests where we included the files: gameManagerTest.cpp leaderboardTest.cpp.
+ > We also added each test and added CMakeLists.txt for running the tests.
  
