@@ -306,14 +306,23 @@ for (i = 0; i < newGame.numQuestions(); i++) {
             cout << j + 1 << ". " << newGame.getAnswer(i, j) << endl;
         }
         getline(cin, userAnswer);
-        if (userAnswer == "1") {
-            userAnswer = newGame.getAnswer(i, 0);
-        } else if (userAnswer == "2") {
-            userAnswer = newGame.getAnswer(i, 1);
-        } else if (userAnswer == "3") {
-            userAnswer = newGame.getAnswer(i, 2);
-        } else if (userAnswer == "4") {
-            userAnswer = newGame.getAnswer(i, 3);
+        while (true) {
+            if (userAnswer == "1") {
+                userAnswer = newGame.getAnswer(i, 0);
+                break;
+            } else if (userAnswer == "2") {
+                userAnswer = newGame.getAnswer(i, 1);
+                break;
+            } else if (userAnswer == "3") {
+                userAnswer = newGame.getAnswer(i, 2);
+                break;
+            } else if (userAnswer == "4") {
+                userAnswer = newGame.getAnswer(i, 3);
+                break;
+            } else {
+                cout << "Please input a number 1-4 corresponding to your answer:" << endl;
+                getline(cin, userAnswer);
+            }
         }
         bool isCorrect = false;
         for(int k = 0; k < 4; k++){ 
@@ -326,8 +335,7 @@ for (i = 0; i < newGame.numQuestions(); i++) {
             cout << "Correct Answer!! - - - current score " << score << endl;
         } else {
             cout << "wrong answer!! - - - current score " << score << endl;
-        }
-       
+        }          
     }
     else if (newGame.getType(i) == 2) {
         cout << "Enter your answer: " << endl;
@@ -393,7 +401,7 @@ void gameManager::readGameFiles(){
 void gameManager::addToGameFiles (string gameName){
     fstream gameFile;
     string gameFileName = "savedGameNames.txt";
-    gameFile.open(gameFileName);
+    gameFile.open(gameFileName, fstream::app);
     if (!gameFile) {
         cout << "Unable to open file." << endl;
         return;
