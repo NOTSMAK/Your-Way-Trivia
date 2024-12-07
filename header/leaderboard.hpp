@@ -1,20 +1,23 @@
-#ifndef leaderboard_H
-#define leaderboard_H
-
+#ifndef LEADERBOARD_H
+#define LEADERBOARD_H
 #include <string>
 #include <vector>
-#include <iostream>
-#include "../header/user.hpp"
+#include "user.hpp"
+
+using namespace std;
+
 class Leaderboard {
-private:
-     vector<User> users;
+    private:
+        string leaderboardFileName; //file name to store log data
 
-public:
-  void addUserToLeaderBoard(const string& filePath, const string& userName, int initialScore);
-  void updateScore(const string& userName, int newScore);
-  void displayLeaderboard(const string& fileName);
-  
+        //helper functions
+        vector<User> fetchLeaderboard(const string&); //stores log data for a given quizName into a sorted vector
+        void sortRankingByScore(vector<User>&);
+    public:
+        Leaderboard(const string& file) : leaderboardFileName(file) {} 
 
+        void logPlay(const User&, const string&); //call after each game played to record it
+        void displayLeaderboard(const string&) const; //calls fetchLeaderboard and print returned vector
 };
 
 #endif
