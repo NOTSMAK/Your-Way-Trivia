@@ -36,7 +36,8 @@ The 'GameManager' class is a collection of games where you are able to add more 
 The 'User' class represents the user of 'Your Way Trivia - Trivia Maker Tool'. It contains attributes representing the username and the user's score.
 
 ## Updated Class Diagram
-![UML class](https://github.com/user-attachments/assets/1d31cb93-e4d2-4ced-a8d4-ddec255b61c9)
+![UML class-2](https://github.com/user-attachments/assets/bcd392fb-76be-45f4-9b2f-14d758c5893d)
+
 
  
  > ## Phase III
