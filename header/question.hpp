@@ -12,17 +12,21 @@ struct answerOption {
 };
 
 class Question {
-    public:
-
     int type;
     std::string question;
     std::vector<answerOption> options;
 
-    Question(int type, std::string question, answerOption option) : type(type), question(question) {
+    public:
+    
+    Question() : type(0), question("") {}
+    Question(int qType, std::string newQuestion, answerOption option) : type(qType), question(newQuestion) {
         options.push_back(option);
     }
-    const string& getAnswer(int answerIndex) { options.at(answerIndex).answer; }
-    const bool& getAnswerCorrectness(int answerIndex) { options.at(answerIndex).isCorrect; }
+    const int& getType() { return type; }
+    const string& getQuestion() { return question; }
+    void addAnswerOption(answerOption newOption) { options.push_back(newOption); }
+    const string& getAnswer(int answerIndex) { return options.at(answerIndex).answer; }
+    const bool& getAnswerCorrectness(int answerIndex) { return options.at(answerIndex).isCorrect; }
 };
 
 #endif

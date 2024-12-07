@@ -1,0 +1,30 @@
+TOF
+Drinking water is essential for staying hydrated.
+true
+TOF
+Regular exercise can improve mental health.
+true
+TOF
+Skipping breakfast is the best way to lose weight.
+false
+TOF
+Getting 7-8 hours of sleep per night is important for good health.
+true
+TOF
+Fruits and vegetables are a good source of vitamins and minerals.
+true
+TOF
+Lifting weights makes you bulky, not healthy.
+false
+TOF
+Cardio exercises help improve heart health.
+true
+TOF
+Eating fast food every day is part of a healthy diet.
+false
+TOF
+Stretching before a workout can help prevent injuries.
+true
+TOF
+Sitting for long periods without moving can be bad for your health.
+true

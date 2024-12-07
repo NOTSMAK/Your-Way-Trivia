@@ -1,0 +1,80 @@
+MCQ
+What car brand has a logo with a prancing horse?
+Ferrari
+1
+Lamborghini
+0
+Porsche
+0
+BMW
+0
+OWA
+What car brand is known for the Corolla?
+Toyota
+TOF
+Is Tesla an electric car company?
+true
+MCQ
+What car brand has a logo with four rings?
+Audi
+1
+Volkswagen
+0
+Mercedes-Benz
+0
+Ford
+0
+OWA
+What car brand is known for the Mustang?
+Ford
+TOF
+Is BMW a German car brand?
+true
+MCQ
+What car brand produces the Civic?
+Honda
+1
+Hyundai
+0
+Mazda
+0
+Nissan
+0
+OWA
+What car brand is known for its Beetle?
+Volkswagen
+TOF
+Is a Lamborghini more expensive than a Toyota?
+true
+MCQ
+What car brand’s logo features a bowtie?
+Chevrolet
+1
+Dodge
+0
+Kia
+0
+Subaru
+0
+OWA
+What car brand makes the Camry?
+Toyota
+TOF
+Is the Ford F-150 a popular truck?
+true
+MCQ
+What car brand is known for the Model S?
+Tesla
+1
+Nissan
+0
+Ford
+0
+Chevrolet
+0
+OWA
+What car brand is known for the Accord?
+Honda
+TOF
+Does Porsche make sports cars?
+true

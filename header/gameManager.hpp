@@ -6,10 +6,15 @@
 #include "./triviaGame.hpp"
 
 class gameManager : triviaGame {
+
     public:
-    
+    void playGame();
+    void createGame();
     void saveQuiz (triviaGame quizToSave);
-    void loadQuiz (const std::string& quizName);
+    triviaGame loadQuiz (const std::string& quizName);
+    void displayOptions();
+    void readGameFiles();
+    void addToGameFiles(string gameName);
 };
 
 #endif
