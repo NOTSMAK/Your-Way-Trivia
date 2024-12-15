@@ -110,41 +110,36 @@ The 'User' class represents the user of 'Your Way Trivia - Trivia Maker Tool'. I
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history.
 >  * Each team member should also submit the Individual Contributions Form on Canvas for this final phase. In this form, you need to fill in the names of all team members, the percentage of work contributed by each member for the final phase, and a description of their contributions. Remember that each team member should submit the form individually.
  
+
 ## Screenshots
+
 ---
 
 ### Menu
 The main menu of the application.
 
-<img src="https://github.com/user-attachments/assets/287f0f33-5502-4faa-9ddb-02767e3bd467" width="600" alt="Menu">
+<img src="https://github.com/user-attachments/assets/9ef15bfb-5c6f-48de-9618-c3ae751eabfa" width="600" alt="Menu">
 
 ---
 
 ### Starting Game
 The interface shown when the game begins.
 
-<img src="https://github.com/user-attachments/assets/2e6b7314-91ff-4130-b622-b33aab3c933f" width="600" alt="Starting Game">
+<img src="https://github.com/user-attachments/assets/551abc14-8a79-4a41-bce6-5d328f01c096" width="600" alt="Starting Game">
 
 ---
 
 ### Formatting of All Question Types
 Demonstrates the formatting used for different types of questions in the game.
 
-<img src="https://github.com/user-attachments/assets/b4748c3b-a794-49d2-82ae-a4a8ab3c933f" width="600" alt="Formatting of All Question Types">
+<img src="https://github.com/user-attachments/assets/a4386547-86e2-4d64-8749-0c51c45b152c" width="600" alt="Formatting of All Question Types">
 
 ---
 
 ### List of All Available Quizzes
 Displays a list of all quizzes available in the application.
 
-<img src="https://github.com/user-attachments/assets/f1ab6d7b-cda6-4c8e-83bb-36ec558504b7" width="600" alt="List of All Available Quizzes">
-
----
-
-### Quiz Creation Tool
-The tool interface for creating quizzes.
-
-<img src="https://github.com/user-attachments/assets/7830a5ae-3a3a-4b30-bfb6-f5c51de53fcc" width="600" alt="Quiz Creation Tool">
+<img src="https://github.com/user-attachments/assets/cf52c942-0046-4558-b784-f081eed3d423" width="600" alt="List of All Available Quizzes">
 
 ---
 
