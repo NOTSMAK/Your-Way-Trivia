@@ -20,11 +20,18 @@ The diagram summarizes the user interactions. From the home menu, users can choo
 
 ### Screen Layouts
 Since this is a terminal game, the screen layouts will appear as output to the console.Screen (1) displays the question when the program runs the game, which expects keyboard input of the letter corresponding to answer choice. Screens (2)-(4) display scores and final score at different stages of the game. Screen (5)-(6) give the user feedback to confirm their input was saved before renavigating to the menu. Screens (9) and (10) are both menus, with (10) being the home menu, which simply display numbers for users to input and navigate to.
-![image](https://github.com/user-attachments/assets/a74232c7-8e45-4f75-b84a-b10d79a0d06f)
-![image](https://github.com/user-attachments/assets/e3fc3094-266f-43e4-a50d-8b90787a1894)
-![image](https://github.com/user-attachments/assets/416dbf3e-0ca2-4278-8152-1823c3cf617c)
-![image](https://github.com/user-attachments/assets/64d1a056-8fce-4cc8-be88-926c5368041b)
-![image](https://github.com/user-attachments/assets/d45e7421-b5ce-421f-8887-c019cfb1c36e)
+
+### Screen (1): Question Display
+<img src="https://github.com/user-attachments/assets/a74232c7-8e45-4f75-b84a-b10d79a0d06f" width="500" alt="Screen 1">
+
+### Screens (2)-(4): Score Display
+<img src="https://github.com/user-attachments/assets/e3fc3094-266f-43e4-a50d-8b90787a1894" width="500" alt="Screen 2">
+
+### Screens (5)-(6): Feedback and Navigation
+<img src="https://github.com/user-attachments/assets/416dbf3e-0ca2-4278-8152-1823c3cf617c" width="500" alt="Screen 3">
+
+### Screens (9)-(10): Menus
+<img src="https://github.com/user-attachments/assets/64d1a056-8fce-4cc8-be88-926c5368041b" width="500" alt="Screen 4">
 
 
 ## Class Diagram
