@@ -13,16 +13,23 @@ Authors: [Ryan Pinto](https://github.com/rpintobusiness), [SM Kamal](https://git
 
 ## User Interface Specification
 ### Navigation Diagram
-![naviDiagram(2)](https://github.com/user-attachments/assets/0e723ce4-c689-440c-a7a7-8809dfe62dfd)
+![Screenshot 2024-12-14 192706](https://github.com/user-attachments/assets/82791576-50d2-4e1a-b76e-74af008f0341)
+
+)
 The diagram summarizes the user interactions. From the home menu, users can choose to start or create a game. Choosing to start a game leads the user to a loop that loads and prompts questions, while creating a game leads the user to another menu. Display messages will be provided to give user feedback before re-navigating back to a menu.
 
 ### Screen Layouts
 Since this is a terminal game, the screen layouts will appear as output to the console.Screen (1) displays the question when the program runs the game, which expects keyboard input of the letter corresponding to answer choice. Screens (2)-(4) display scores and final score at different stages of the game. Screen (5)-(6) give the user feedback to confirm their input was saved before renavigating to the menu. Screens (9) and (10) are both menus, with (10) being the home menu, which simply display numbers for users to input and navigate to.
-![screenLayout(all)](https://github.com/user-attachments/assets/d9fda930-b513-47a1-a09a-1e2e37f508ff)
+![image](https://github.com/user-attachments/assets/a74232c7-8e45-4f75-b84a-b10d79a0d06f)
+![image](https://github.com/user-attachments/assets/e3fc3094-266f-43e4-a50d-8b90787a1894)
+![image](https://github.com/user-attachments/assets/416dbf3e-0ca2-4278-8152-1823c3cf617c)
+![image](https://github.com/user-attachments/assets/64d1a056-8fce-4cc8-be88-926c5368041b)
+![image](https://github.com/user-attachments/assets/d45e7421-b5ce-421f-8887-c019cfb1c36e)
 
 
 ## Class Diagram
-![umlClassDiagram](https://github.com/user-attachments/assets/6123b173-d7e7-42b4-ad85-e7292820afeb)
+![image](https://github.com/user-attachments/assets/001f41ba-0f00-4be8-a00e-76671ec22d28)
+
 Description: 
 
 The 'Question' class is the base class for all types of questions. The attributes include the question prompt, the correct answer, and the answer given by the student. The methods are display() (which displays the question), checkAnswer() (which checks if the provided answer is correct), and serialize() (which converts question to a string format for saving).
@@ -40,7 +47,8 @@ The 'User' class represents the user of 'Your Way Trivia - Trivia Maker Tool'. I
  
  > ## Phase III
 ## Updated Class Diagram
-![UML class-2](https://github.com/user-attachments/assets/bcd392fb-76be-45f4-9b2f-14d758c5893d)
+![image](https://github.com/user-attachments/assets/b58ecc0c-3c95-48bd-821a-105e6004c9cb)
+
  
  > BEFORE the meeting you should do the following:
  > * Update your class diagram from Phase II to include any feedback you received from your TA/grader.
